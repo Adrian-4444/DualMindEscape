@@ -43,7 +43,7 @@ export async function POST(request: Request) {
         team_name VARCHAR(255) NOT NULL,
         role VARCHAR(50),
         level INT NOT NULL,
-        score INT NOT NULL,
+        score FLOAT NOT NULL,
         time_taken_seconds INT NOT NULL,
         solved BOOLEAN NOT NULL,
         completed_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP

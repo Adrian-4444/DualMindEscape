@@ -97,10 +97,10 @@ export default function GameHq() {
     const timeTaken = levelStartTime ? Math.floor((Date.now() - levelStartTime) / 1000) : 0;
     let score = 0;
     if (isSolved) {
-      if (timeTaken <= 180) score = 5;       // < 3 mins
-      else if (timeTaken <= 300) score = 4;  // < 5 mins
-      else if (timeTaken <= 600) score = 3;  // < 10 mins
-      else score = 2;                        // > 10 mins
+      if (timeTaken <= 180) score = 2.5;       // < 3 mins
+      else if (timeTaken <= 300) score = 2.0;  // < 5 mins
+      else if (timeTaken <= 600) score = 1.5;  // < 10 mins
+      else score = 1.0;                        // > 10 mins
     }
 
     try {
