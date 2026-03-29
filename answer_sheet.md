@@ -48,12 +48,12 @@ This document is for the **Event Host / Game Master** to verify team progress an
 ### Player A (Decoder)
 - **Task:** Decode the Base64 string: `U2VydmVyRmFpbHVyZUF0MjM6MDA=`
 - **Correct Answer:** `ServerFailureAt23:00`
-- **They Receive Clue:** "Clue 1: SERVER"
+- **They Receive Clue:** "Clue 1: SYSTEM"
 
 ### Player B (Analyst)
 - **Task:** Convert the Hex error code `0x1A4` to decimal.
 - **Correct Answer:** `420`
-- **They Receive Clue:** "Clue 2: 23:00"
+- **They Receive Clue:** "Clue 2: ERROR"
 
 ---
 
