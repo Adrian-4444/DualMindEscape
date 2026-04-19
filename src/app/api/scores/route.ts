@@ -54,7 +54,8 @@ export async function POST(request: Request) {
         level_4_score FLOAT DEFAULT 0,
         level_5_score FLOAT DEFAULT 0,
         total_score FLOAT DEFAULT 0,
-        total_time INT DEFAULT 0
+        total_time INT DEFAULT 0,
+        total_score = (level_1_score + level_2_score + level_3_score + level_4_score + level_5_score)
       );
     `);
 
