@@ -53,9 +53,7 @@ export async function POST(request: Request) {
         level_3_score FLOAT DEFAULT 0,
         level_4_score FLOAT DEFAULT 0,
         level_5_score FLOAT DEFAULT 0,
-        total_score FLOAT DEFAULT 0,
-        total_time INT DEFAULT 0,
-        total_score = (level_1_score + level_2_score + level_3_score + level_4_score + level_5_score)
+        total_time INT DEFAULT 0
       );
     `);
 
@@ -63,9 +61,7 @@ export async function POST(request: Request) {
     try { await pool.query(`ALTER TABLE player_progress DROP CONSTRAINT IF EXISTS player_progress_pkey CASCADE`); } catch (e) {}
     try { await pool.query(`ALTER TABLE player_progress ADD COLUMN id SERIAL PRIMARY KEY`); } catch (e) {}
     try { await pool.query(`ALTER TABLE player_progress ADD COLUMN total_time INT DEFAULT 0`); } catch (e) {}
-    try { await pool.query(`ALTER TABLE player_progress UPDATE COLUMN total_score = level_1_score + level_2_score + level_3_score + level_4_score + level_5_score`); } catch (e) {}
-
-
+    
     if (body.action === 'save_final_time') {
       const { teamName, role, totalTime } = body;
       if (!teamName || !role || totalTime === undefined) {
