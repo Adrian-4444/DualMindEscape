@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 
     // Ensure table exists
     await pool.query(`
-      CREATE TABLE IF NOT EXISTS player_progress1 (
+      CREATE TABLE IF NOT EXISTS player_progress (
         id SERIAL PRIMARY KEY,
         team_name VARCHAR(255) NOT NULL,
         role VARCHAR(50) NOT NULL,
